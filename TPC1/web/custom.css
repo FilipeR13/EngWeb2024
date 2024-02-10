@@ -1,0 +1,17 @@
+header {
+    width: 100%;
+    display: block;
+    padding: 20px; /* Add padding for better visual appearance */
+    box-sizing: border-box; /* Include padding in width calculation */
+    background-color: #1d4ed8; /* Set background color */
+    color: white; /* Set text color */
+}
+
+footer {
+    width: 100%;
+    display: block;
+    padding: 20px; /* Add padding for better visual appearance */
+    box-sizing: border-box; /* Include padding in width calculation */
+    background-color: #1d4ed8; /* Set background color */
+    color: white; /* Set text color */
+}
