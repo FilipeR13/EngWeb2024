@@ -15,3 +15,9 @@ footer {
     background-color: #1d4ed8; /* Set background color */
     color: white; /* Set text color */
 }
+
+.rounded-box {
+    border: 1px solid #ccc; /* border style */
+    border-radius: 5px; /* border radius for rounded corners */
+    padding: 10px; /* optional: add padding for some space around the text */
+}
