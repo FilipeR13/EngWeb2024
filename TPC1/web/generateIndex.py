@@ -6,8 +6,9 @@ header = """
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="./custom.css" rel="stylesheet">
+  <title>Lista das Ruas de Braga</title>
 </head>
 
 <body>
@@ -23,7 +24,7 @@ header = """
 ruas = []
 for file in os.listdir("../MapaRuas-materialBase/texto/"):
     # acess the name of the file
-    name = file.split(".")[0][7:]
+    name = file[7:-4]
     # add a space befere each capital letter
     final = name[0]
     for i in range(1, len(name)):
@@ -38,7 +39,9 @@ list = ""
 for final in ruas:
     list += f"""
                 <li class="rounded-box">
-                    {final}
+                    <a href="RuasPages/{final.replace(" ","")}.html">
+                        {final}
+                    </a>
                 </li>
     """
 
