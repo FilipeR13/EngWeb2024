@@ -12,3 +12,5 @@ Neste trabalho, utilizou-se o material forneceido pelo docente, ficheiros XML co
 O site apresenta uma página principal com a lista de ruas ordenada alfabeticamente.
 
 Clicando numa das ruas acede-se à página individual onde se pode consultar toda a sua informação. Nesta página há também um link para regressar à página principal.
+
+Foram criados dois scripts python para gerar tanto o index como cada uma das páginas das ruas. Estes scripts estão disponíveis na pasta "web" sob os nomes, respetivamente, "generateIndex.py" e "generateRuasPages.py".
