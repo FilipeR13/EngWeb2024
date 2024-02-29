@@ -10,11 +10,12 @@
 Neste trabalho, utilizou-se um dataset sobre filmes para criar um servidor web que permite navegar pelos filmes e respetivos géneros e elenco.
 
 Primeiramente, devido ao dataset que foi entregue conter vários erros, foi desenvolvido um scipt em python que normaliza estes dados e escreve para o ficheiro `filmes_normalizados.json`. Este ficheiro json vai conter três entradas principais: filmes, atores e generos. O primeiro contem uma lista de dicionarios com as chaves:
-    1. id
-    2. title
-    3. year
-    4. cast
-    5. genres
+1. id
+2. title
+3. year
+4. cast
+5. genres
+   
 Sendo os últimos dois uma lista.
 Ambas entradas atores e generos são apenas uma lista de dicionarios que possuem apenas uma chave, id, que é o próprio nome do ator/género, visto que estes são únicos.
 
