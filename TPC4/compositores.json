@@ -1343,6 +1343,46 @@
       "dataNasc": "1688-10-17",
       "dataObito": "1726-01-02",
       "periodo": "Barroco"
+    },
+    {
+      "id": "C105",
+      "nome": "Arnold Schoenberg",
+      "bio": "Arnold Schoenberg (Viena, 13 de setembro de 1874 - Los Angeles, 13 de julho de 1951) foi um compositor, maestro, teórico musical e pintor austríaco, um dos mais importantes e influentes músicos do século XX. É conhecido principalmente por desenvolver o sistema dodecafônico ou serialismo, uma técnica composicional revolucionária.",
+      "dataNasc": "1874-09-13",
+      "dataObito": "1951-07-13",
+      "periodo": "Modernismo"
+    },
+    {
+      "id": "C106",
+      "nome": "Igor Stravinsky",
+      "bio": "Igor Stravinsky (Oranienbaum, 17 de junho de 1882 - Nova Iorque, 6 de abril de 1971) foi um dos mais importantes compositores do século XX. Nasceu na Rússia e tornou-se cidadão estadunidense em 1945. Suas obras incluem balés, óperas, sinfonias e concertos, e ele é conhecido por sua experimentação com ritmo, harmonia e textura.",
+      "dataNasc": "1882-06-17",
+      "dataObito": "1971-04-06",
+      "periodo": "Modernismo"
+    },
+    {
+      "id": "C107",
+      "nome": "Anton Webern",
+      "bio": "Anton Webern (Viena, 3 de dezembro de 1883 - Mittersill, 15 de setembro de 1945) foi um compositor austríaco e um dos principais representantes da Segunda Escola de Viena, juntamente com Arnold Schoenberg e Alban Berg. Suas obras são conhecidas por sua brevidade e economia de material musical.",
+      "dataNasc": "1883-12-03",
+      "dataObito": "1945-09-15",
+      "periodo": "Serialismo"
+    },
+    {
+      "id": "C108",
+      "nome": "Alban Berg",
+      "bio": "Alban Berg (Viena, 9 de fevereiro de 1885 - Viena, 24 de dezembro de 1935) foi um compositor austríaco e membro da Segunda Escola de Viena, juntamente com Arnold Schoenberg e Anton Webern. Ele é conhecido por suas óperas Wozzeck e Lulu, além de suas contribuições para o dodecafonismo.",
+      "dataNasc": "1885-02-09",
+      "dataObito": "1935-12-24",
+      "periodo": "Serialismo"
+    },
+    {
+      "id": "C109",
+      "nome": "Pierre Boulez",
+      "bio": "Pierre Boulez (Montbrison, 26 de março de 1925 - Baden-Baden, 5 de janeiro de 2016) foi um compositor, maestro e teórico musical francês. Ele foi uma figura central na música contemporânea e foi conhecido por suas inovações técnicas e estilísticas, bem como por seu trabalho como regente e fundador de instituições musicais.",
+      "dataNasc": "1925-03-26",
+      "dataObito": "2016-01-05",
+      "periodo": "Serialismo"
     }
   ]
 }
