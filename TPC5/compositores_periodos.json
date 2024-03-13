@@ -1395,9 +1395,6 @@
   ],
   "periodos": [
     {
-      "id": "Renascimento"
-    },
-    {
       "id": "Barroco"
     },
     {
@@ -1405,6 +1402,9 @@
     },
     {
       "id": "Modernismo"
+    },
+    {
+      "id": "Renascimento"
     }
   ]
 }
