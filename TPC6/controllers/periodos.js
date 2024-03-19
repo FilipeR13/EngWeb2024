@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 var Periodo = require ('../models/periodos');
 
 module.exports.list = () => {
@@ -14,9 +13,9 @@ module.exports.lookUp = id => {
         .exec()
 }
 
-module.exports.insert = Periodo => {
-    if ((Periodo.find({id: Periodo.id}).exec()) != null) {
-        var novo = new Periodo(Periodo)
+module.exports.insert = periodo => {
+    if ((Periodo.find({id: periodo.id}).exec()) != null) {
+        var novo = new Periodo(periodo)
         return novo.save()
     }
     else {
@@ -24,9 +23,9 @@ module.exports.insert = Periodo => {
     }
 }
 
-module.exports.update = (id, Periodo) => {
+module.exports.update = (id, periodo) => {
     return Periodo
-        .findOneAndUpdate({id: id}, Periodo, {new: true})
+        .findOneAndUpdate({id: id}, periodo, {new: true})
         .exec()
 }
 

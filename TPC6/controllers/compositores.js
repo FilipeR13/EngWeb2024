@@ -1,4 +1,3 @@
-const mongoose = require('mongoose');
 var Compositor = require ('../models/compositores');
 
 module.exports.list = () => {
@@ -14,15 +13,15 @@ module.exports.lookUp = id => {
         .exec()
 }
 
-module.exports.compositorByPeriido = periodo => {
+module.exports.compositorByPerido = periodo => {
     return Compositor
         .find({periodo: periodo})
         .exec()
 }
 
-module.exports.insert = Compositor => {
-    if ((Compositor.find({id: Compositor.id}).exec()) != null) {
-        var novo = new Compositor(Compositor)
+module.exports.insert = compositor => {
+    if ((Compositor.findOne({id: compositor.id}).exec()) != null) {
+        var novo = new Compositor(compositor)
         return novo.save()
     }
     else {
@@ -30,9 +29,9 @@ module.exports.insert = Compositor => {
     }
 }
 
-module.exports.update = (id, Compositor) => {
+module.exports.update = (id, compositor) => {
     return Compositor
-        .findOneAndUpdate({id: id}, Compositor, {new: true})
+        .findOneAndUpdate({id: id}, compositor, {new: true})
         .exec()
 }
 

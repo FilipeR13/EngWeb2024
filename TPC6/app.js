@@ -3,6 +3,15 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var mongoose = require('mongoose');
+
+var mongoDB = 'mongodb://127.0.0.1/TPC6';
+mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'Erro na ligação ao MongoDB'));
+db.once('open', function() {
+  console.log('Ligação ao MongoDB bem sucedida');
+});
 
 var indexRouter = require('./routes/index');
 
