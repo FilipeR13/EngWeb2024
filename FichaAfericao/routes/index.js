@@ -31,6 +31,18 @@ router.get('/modalidades', function(req, res) {
     })
 });
 
+router.get('/modalidades/:modalidade', function(req, res) {
+  Modalidades.lookUp(req.params.modalidade)
+    .then(resposta => {
+      res.status(200).jsonp(resposta);
+    })
+    .catch(error => {
+      console.error(error);
+      res.status(500).send("Internal Server Error");
+    });
+});
+
+
 router.post('/pessoas/registo', function(req, res) {
   Pessoas.insert(req.body)
     .then( resposta => {

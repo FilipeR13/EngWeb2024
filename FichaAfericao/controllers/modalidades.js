@@ -1,5 +1,5 @@
 var Modalidades = require ('../models/modalidades');
-var Modalidades = require ('../models/pessoas');
+var Pessoas = require ('../models/pessoas');
 
 module.exports.list = () => {
     return Modalidades
@@ -9,17 +9,29 @@ module.exports.list = () => {
         .exec()
 }
 
-module.exports.lookUp = nome => {
-    list_person =  Modalidades
-        .findOne({nome: nome})
-        .select({pessoas: 1})
-        .exec()
-    
-    for (var i = 0; i < list_person.length; i++) {
-        list_person[i] = Pessoas.findOne({_id: list_person[i]}).exec()
+module.exports.lookUp = async (nome) => {
+    try {
+        const modalidade = await Modalidades.findOne({ nome: nome }).select('pessoas').exec();
+
+        if (!modalidade) {
+            return []; // Return an empty array if modalidade is not found
+        }
+
+        const list_person_ids = modalidade.pessoas;
+
+        console.log(list_person_ids);
+
+        const list_person = await Promise.all(list_person_ids.map(async (personId) => {
+            return await Pessoas.findOne({ id: personId }).exec();
+        }));
+
+        console.log(list_person);
+        return list_person;
+    } catch (error) {
+        console.error(error);
+        throw error; // Rethrow the error
     }
-    return list_person
-}
+};
 
 module.exports.insert = modalidade => {
     if ((Modalidades.findOne({nome: modalidade.nome}).exec()) != null) {
